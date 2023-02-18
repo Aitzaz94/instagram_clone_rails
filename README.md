@@ -1,6 +1,6 @@
 # README
 
-Following this resource: https://www.youtube.com/watch?v=DhxLOC-9kW0&ab_channel=Malacow || currently at: 34 minute
+Following this resource: https://www.youtube.com/watch?v=DhxLOC-9kW0&ab_channel=Malacow || currently at: 1:04 minute
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
