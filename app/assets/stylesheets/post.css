@@ -1,0 +1,25 @@
+.post-container{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 20xp;
+    position: relative;
+}
+.post-link{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.post-link:hover{
+    opacity: 0.2;
+}
+.post-images{
+    object-fit: cover;
+    width: 300px;
+    height: 600px;
+}
