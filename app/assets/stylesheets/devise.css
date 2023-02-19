@@ -1,0 +1,21 @@
+.signup-page-format{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.signup-submit{
+    margin-top: 50px;
+}
+.signin-page-format{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.edit-user-format{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.edit-user-submit{
+    margin-top: 50px;
+}
