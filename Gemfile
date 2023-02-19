@@ -21,6 +21,7 @@ gem "bootsnap", require: false
 
 # Adding gems for this app here:
 gem 'devise'
+gem 'pundit'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

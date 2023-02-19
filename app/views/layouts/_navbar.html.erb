@@ -10,20 +10,27 @@
         <li class="nav-item">
           <%= link_to "About", home_about_path, class:'nav-link' %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Sign Up", new_user_registration_path, class:'nav-link' %>
-        </li>
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to "Sign Out", destroy_user_session_path, class:'nav-link user-signout-btn' %>
           </li>
+          <li class="nav-item">
+            <%= link_to "Upload Post", new_post_path, class:'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Edit Account", edit_user_registration_path, class:'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "My Posts", posts_myposts_path, class:'nav-link' %>
+          </li>
+          <li class="nav-item nav-link">
+            <%= current_user.email %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Sign In", new_user_session_path, class:'nav-link user-signout-btn' %>
+          </li>
         <% end %>
-        <li class="nav-item">
-          <%= link_to "Upload Post", new_post_path, class:'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Edit Account", edit_user_registration_path, class:'nav-link' %>
-        </li>
       </ul>
     </div>
   </div>

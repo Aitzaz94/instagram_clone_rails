@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /posts or /posts.json
   def index
@@ -8,6 +9,13 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @posts ||= policy_scope(Post)
+    flash.now[:notice] = "You don't have any posts yet." if @posts.empty?
+  end
+
+  def myposts
+    @posts ||= policy_scope(Post)
+    flash.now[:notice] = "You don't have any posts yet." if @posts.empty?
   end
 
   # GET /posts/new
@@ -22,6 +30,7 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
