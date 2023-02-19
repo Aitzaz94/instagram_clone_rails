@@ -11,6 +11,13 @@
     <%= post.keyword %>
   </p>
 
+  <% if user_signed_in? %>
+    <% if policy(post)&.owned_by_user? %>
+      <p> Post By: <strong> You </strong> </p>
+    <% else %>
+      <p> Post By: <%= post.user.email %> </p>
+    <% end %>
+  <% end %>
   <p>
     <% post.images.each do |image| %>
       <%= image_tag(image, class:"post-images") %>
